@@ -15,13 +15,14 @@ class MemoryGame(Game):
 
 
 def generate_sequence(difficulty):
-    print("\n" * 100)
+    print("\n" * 1000)
     random_num = []
     for i in range(1, difficulty + 1):
         random_num.append(randrange(1, 102))
     print(*random_num, sep=', ')
     time.sleep(0.7)
-    print("\n" * 100)
+    print("\n" * 1000)
+    return random_num
 
 
 def get_list_from_user(difficulty):
@@ -29,3 +30,4 @@ def get_list_from_user(difficulty):
     for i in range(1, difficulty + 1):
         user_num = input(f"Please enter one number you remember and press 'Enter'")
         user_num_list.append(user_num)
+    return user_num_list
