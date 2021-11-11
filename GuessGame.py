@@ -20,5 +20,3 @@ def get_guess_from_user(difficulty):
 
 def compare_results(secret_number, guess):
     return secret_number == guess
-
-Blabla
