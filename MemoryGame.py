@@ -4,8 +4,6 @@ from random import randrange
 
 import time
 
-from shutil import get_terminal_size
-
 
 class MemoryGame(Game):
     # def __init__(self, game_type, difficulty):
@@ -25,4 +23,9 @@ def generate_sequence(difficulty):
     time.sleep(0.7)
     print("\n" * 100)
 
-# def get_list_from_user(difficulty):
+
+def get_list_from_user(difficulty):
+    user_num_list = []
+    for i in range(1, difficulty + 1):
+        user_num = input(f"Please enter one number you remember and press 'Enter'")
+        user_num_list.append(user_num)
