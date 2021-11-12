@@ -4,7 +4,6 @@ import time
 
 
 class MemoryGame(Game):
-
     def play(self, difficulty):
         return is_list_equal(generate_sequence(difficulty), get_list_from_user(difficulty))
 
