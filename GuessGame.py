@@ -1,5 +1,5 @@
-import random
 from Game import Game
+import random
 
 
 class GuessGame(Game):
