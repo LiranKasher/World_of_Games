@@ -1,7 +1,5 @@
 from Game import Game
-
 from random import randrange
-
 import time
 
 
