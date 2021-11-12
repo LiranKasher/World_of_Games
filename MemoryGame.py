@@ -6,13 +6,9 @@ import time
 
 
 class MemoryGame(Game):
-    # def __init__(self, game_type, difficulty):
-    #     super().__init__(game_type, difficulty)
-    #     self.game_type = game_type
-    #     self.difficulty = difficulty
 
     def play(self, difficulty):
-        print(is_list_equal(generate_sequence(difficulty), get_list_from_user(difficulty)))
+        return is_list_equal(generate_sequence(difficulty), get_list_from_user(difficulty))
 
 
 def generate_sequence(difficulty):
