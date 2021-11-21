@@ -5,4 +5,4 @@ class Game:
 
     @staticmethod
     def play(self, difficulty):
-        print("Game")
+        pass
