@@ -8,12 +8,18 @@ difficulty = 0
 
 def player_name():
     global current_name
-    current_name = input(f"Please enter your first name:\n")
+    while True:
+        current_name = input(f"\nPlease enter your first name:\n")
+        if not current_name.isalpha():
+            print(f"Please use only letters A-Z, capital or non capital.")
+            time.sleep(1)
+        else:
+            break
     return current_name
 
 
 def welcome(name):
-    print(f"Hello {name} and welcome to World of Games (WoG).\nHere you can find many cool games to play.\n")
+    print(f"\nHello {name} and welcome to World of Games (WoG).\nHere you can find many cool games to play.\n")
 
 
 def load_game():
