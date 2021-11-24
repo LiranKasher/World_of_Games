@@ -20,11 +20,17 @@ def generate_sequence(difficulty):
 
 
 def get_list_from_user(difficulty):
-    user_num_list = []
-    for i in range(1, difficulty + 1):
-        user_num = int(input(f"Please enter one number you remember and press 'Enter':\n"))
-        user_num_list.append(user_num)
-    return user_num_list
+    while True:
+        user_num_list = []
+        for i in range(1, difficulty + 1):
+            user_num = input(f"Please enter a number you remember, and press 'Enter':\n")
+            if type(user_num) != int:
+                print(f"\nPlease try again, make sure to use numbers only.\n")
+                time.sleep(2)
+                break
+            else:
+                user_num_list.append(user_num)
+        return user_num_list
 
 
 def is_list_equal(random_num_list, user_num_list):
