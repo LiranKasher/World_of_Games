@@ -39,17 +39,17 @@ def load_game():
                 print(f"\nOops, it seems like you hit the wrong number, please try again using numbers between 1-3.\n")
                 time.sleep(2)
         except ValueError:
-            print(f"\nPlease use only numbers between 1-3. \n")
+            print(f"\nPlease use only numbers between 1-3.\n")
             time.sleep(2)
     while True:
         try:
-            difficulty = int(input(f"\nPlease choose game difficulty from 1 to 5: \n"))
+            difficulty = int(input(f"\nPlease choose game difficulty from 1 to 5:\n"))
             if difficulty in range(1, 6):
                 break
             else:
                 print(f"\nOops, it seems like you hit the wrong number, please try again using numbers between 1-5.\n")
                 time.sleep(2)
         except ValueError:
-            print(f"\nPlease use only numbers between 1-5. \n")
+            print(f"\nPlease use only numbers between 1-5.\n")
             time.sleep(2)
     return Game(game_type, difficulty)
