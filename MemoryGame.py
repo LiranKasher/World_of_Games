@@ -5,7 +5,7 @@ import time
 
 class MemoryGame(Game):
     def play(self, difficulty):
-        print(is_list_equal(generate_sequence(difficulty), get_list_from_user(difficulty)))
+        return is_list_equal(generate_sequence(difficulty), get_list_from_user(difficulty))
 
 
 def generate_sequence(difficulty):
@@ -41,7 +41,5 @@ def is_list_equal(random_num_list, user_num_list):
     for i in user_num_list:
         is_equal = i in random_num_list
         if not is_equal:
-            print(is_equal)
             return is_equal
-        print(is_equal)
     return is_equal
