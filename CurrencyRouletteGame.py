@@ -16,7 +16,6 @@ class CurrencyRouletteGame(Game):
             is_won = True
         else:
             is_won = False
-        print(is_won)
         return is_won
 
 
@@ -27,7 +26,6 @@ def get_money_interval(difficulty):
     converted_value = c.convert(random_num, 'USD', 'ILS')
     interval_low = converted_value - (5 - difficulty)
     interval_high = converted_value + (5 - difficulty)
-    print(f"rnd = {random_num}, con = {converted_value}, low = {interval_low}, high = {interval_high}")
     return interval_low, interval_high, random_num
 
 
