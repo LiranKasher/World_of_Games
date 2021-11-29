@@ -5,7 +5,7 @@ import time
 
 class GuessGame(Game):
     def play(self, difficulty):
-        print(compare_results(generate_number(difficulty), get_guess_from_user(difficulty)))
+        return compare_results(generate_number(difficulty), get_guess_from_user(difficulty))
 
 
 def generate_number(difficulty):
