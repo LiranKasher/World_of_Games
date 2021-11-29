@@ -10,7 +10,8 @@ interval_high = 0
 
 class CurrencyRouletteGame(Game):
     def play(self, difficulty):
-        guess = get_guess_from_user(difficulty)
+        get_money_interval(difficulty)
+        guess = get_guess_from_user()
         if interval_low < guess < interval_high:
             is_won = True
         else:
@@ -22,17 +23,15 @@ class CurrencyRouletteGame(Game):
 def get_money_interval(difficulty):
     global interval_low, interval_high, random_num
     c = CurrencyConverter(SINGLE_DAY_ECB_URL)
-    get_money_interval.random_num = random.randint(1, 100)
-    random_num = random.randint(1, 100)
-    convert_value = c.convert(get_money_interval.random_num, 'USD', 'ILS')
-    interval_low = convert_value - (5 - difficulty)
-    interval_high = convert_value + (5 - difficulty)
-    print(f"rnd = {get_money_interval.random_num}, con = {convert_value}")
+    random_num = random.randint(1, 101)
+    converted_value = c.convert(random_num, 'USD', 'ILS')
+    interval_low = converted_value - (5 - difficulty)
+    interval_high = converted_value + (5 - difficulty)
+    print(f"rnd = {random_num}, con = {converted_value}, low = {interval_low}, high = {interval_high}")
     return interval_low, interval_high, random_num
 
 
-def get_guess_from_user(difficulty):
-    global random_num
+def get_guess_from_user():
     is_answer_correct = False
     while not is_answer_correct:
         try:
