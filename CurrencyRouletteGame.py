@@ -46,3 +46,6 @@ def get_guess_from_user():
         except ValueError:
             print(f"\nPlease try again, make sure to use numbers only.\n")
             time.sleep(2)
+
+
+kj = 1
