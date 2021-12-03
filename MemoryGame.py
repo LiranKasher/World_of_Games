@@ -1,6 +1,7 @@
 from GameClass import Game
 from random import randrange
 import time
+import os
 
 
 class MemoryGame(Game):
@@ -9,13 +10,13 @@ class MemoryGame(Game):
 
 
 def generate_sequence(difficulty):
-    print("\n" * 1000)
+    os.system('clear')
     random_num_list = []
     for i in range(1, difficulty + 1):
         random_num_list.append(randrange(1, 102))
     print(*random_num_list, sep=', ')
     time.sleep(0.7)
-    print("\n" * 1000)
+    os.system('clear')
     return random_num_list
 
 
