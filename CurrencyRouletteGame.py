@@ -1,6 +1,6 @@
 import random
 import time
-from GameClass import Game
+from Class import Game
 from currency_converter import CurrencyConverter, SINGLE_DAY_ECB_URL
 
 random_num = 0

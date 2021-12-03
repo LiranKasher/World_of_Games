@@ -1,4 +1,4 @@
-from GameClass import Game
+from Class import Game
 import random
 import time
 
