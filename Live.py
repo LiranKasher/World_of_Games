@@ -1,5 +1,6 @@
 from Class import Game
 import time
+import os
 
 current_name = ""
 game_type = 0
@@ -27,6 +28,7 @@ def load_game():
     global difficulty
     while True:
         try:
+            os.system('clear')
             game_type = int(input(f"Please choose a game to play:\n"
                                   f"1. Memory Game - a sequence of numbers will appear for 1 second, and you have to "
                                   f"guess it back.\n"
@@ -36,20 +38,21 @@ def load_game():
             if game_type in range(1, 4):
                 break
             else:
-                print(f"\nOops, it seems like you hit the wrong number, please try again using numbers between 1-3.\n")
+                print(f"Oops, it seems like you hit the wrong number, please try again using numbers between 1-3.\n")
                 time.sleep(2)
         except ValueError:
-            print(f"\nPlease use only numbers between 1-3.\n")
+            print(f"Please use only numbers between 1-3.\n")
             time.sleep(2)
     while True:
         try:
-            difficulty = int(input(f"\nPlease choose game difficulty from 1 to 5:\n"))
+            os.system('clear')
+            difficulty = int(input(f"Please choose game difficulty from 1 to 5:\n"))
             if difficulty in range(1, 6):
                 break
             else:
-                print(f"\nOops, it seems like you hit the wrong number, please try again using numbers between 1-5.\n")
+                print(f"Oops, it seems like you hit the wrong number, please try again using numbers between 1-5.\n")
                 time.sleep(2)
         except ValueError:
-            print(f"\nPlease use only numbers between 1-5.\n")
+            print(f"Please use only numbers between 1-5.\n")
             time.sleep(2)
     return Game(game_type, difficulty)
