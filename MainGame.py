@@ -8,7 +8,6 @@ import os
 
 def play_game():
     game_on = True
-    answer = ""
     just_played = False
     while game_on:
         if not just_played:
@@ -20,18 +19,14 @@ def play_game():
             GuessGame(game.game_type, game.difficulty).play(game.difficulty)
         elif game.game_type == 3:
             CurrencyRouletteGame(game.game_type, game.difficulty).play(game.difficulty)
-        os.system('clear')
-        print(f"answer = {answer}")
         while True:
-            answer = input(f"\nWould you like to play again (please answer with 'yes' or 'no')?\n")
+            os.system('clear')
+            answer = input(f"Would you like to play again (answer with 'yes' or 'no')?\n")
             if answer not in ["yes", "no"]:
-                print(f"answer in if = {answer}")
-                print(f"\nPlease try again, use only 'yes' or 'no'.")
+                print(f"Please try again, use only 'yes' or 'no'.")
                 time.sleep(2)
             else:
-                print(f"answer in else = {answer}")
                 break
-        print(f"answer after while = {answer}")
         if answer == "no":
             break
         else:
