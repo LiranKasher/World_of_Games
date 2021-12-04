@@ -1,6 +1,6 @@
 from Class import Game
+from Utils import screen_cleaner
 import time
-import os
 
 current_name = ""
 game_type = 0
@@ -10,17 +10,18 @@ difficulty = 0
 def player_name():
     global current_name
     while True:
-        current_name = input(f"\nPlease enter your first name:\n")
+        current_name = input(f"Please enter your first name:\n")
         if not current_name.isalpha():
             print(f"Please use only letters A-Z, capital or non capital.")
             time.sleep(1)
         else:
             break
+    screen_cleaner()
     return current_name
 
 
 def welcome(name):
-    print(f"\nHello {name} and welcome to World of Games (WoG).\nHere you can find many cool games to play.\n")
+    print(f"Hello {name} and welcome to World of Games (WoG).\nHere you can find many cool games to play.\n")
 
 
 def load_game():
@@ -28,7 +29,7 @@ def load_game():
     global difficulty
     while True:
         try:
-            os.system('clear')
+            screen_cleaner()
             game_type = int(input(f"Please choose a game to play:\n"
                                   f"1. Memory Game - a sequence of numbers will appear for 1 second, and you have to "
                                   f"guess it back.\n"
@@ -45,7 +46,7 @@ def load_game():
             time.sleep(2)
     while True:
         try:
-            os.system('clear')
+            screen_cleaner()
             difficulty = int(input(f"Please choose game difficulty from 1 to 5:\n"))
             if difficulty in range(1, 6):
                 break

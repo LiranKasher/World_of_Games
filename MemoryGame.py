@@ -1,7 +1,7 @@
 from Class import Game
 from random import randrange
+from Utils import screen_cleaner
 import time
-import os
 
 
 class MemoryGame(Game):
@@ -10,13 +10,13 @@ class MemoryGame(Game):
 
 
 def generate_sequence(difficulty):
-    os.system('clear')
+    screen_cleaner()
     random_num_list = []
     for i in range(1, difficulty + 1):
         random_num_list.append(randrange(1, 102))
     print(*random_num_list, sep=', ')
     time.sleep(0.7)
-    os.system('clear')
+    screen_cleaner()
     return random_num_list
 
 
@@ -30,7 +30,7 @@ def get_list_from_user(difficulty):
                 user_num_list.append(int(user_num))
                 is_answer_correct = True
             else:
-                print(f"\nPlease try again, make sure to use numbers only.\n")
+                print(f"Please try again, make sure to use numbers only.\n")
                 time.sleep(2)
                 is_answer_correct = False
                 break
