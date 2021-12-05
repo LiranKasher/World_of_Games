@@ -1,6 +1,5 @@
 import os
 import platform
-import time
 
 SCORES_FILE_NAME = "Scores.txt"
 BAD_RETURN_CODE = 1
@@ -14,4 +13,4 @@ def screen_cleaner():
     elif platform.system() == "Darwin":
         os.system("/usr/bin/osascript -e")
     else:
-        pass
+        print("\n" * 1000)
