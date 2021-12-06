@@ -33,8 +33,7 @@ def get_guess_from_user():
     is_answer_correct = False
     while not is_answer_correct:
         try:
-            guess = input(f"Welcome to Currency Roulette game.\n"
-                          f"Please write, what will be the amount of converted currency in ILS, if we convert "
+            guess = input(f"Please write, what will be the amount of converted currency in ILS, if we convert "
                           f"{random_num}$ to ILS?\n")
             if guess.isnumeric():
                 is_answer_correct = True

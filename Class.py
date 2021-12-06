@@ -3,6 +3,8 @@ class Game:
         self.game_type = game_type
         self.difficulty = difficulty
 
-    @staticmethod
     def play(self, difficulty):
+        pass
+
+    def add_score(self, difficulty):
         pass

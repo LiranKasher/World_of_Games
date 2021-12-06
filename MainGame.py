@@ -1,5 +1,4 @@
 from Live import *
-from Utils import screen_cleaner
 from GuessGame import *
 from MemoryGame import *
 from CurrencyRouletteGame import *
