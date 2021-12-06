@@ -5,6 +5,3 @@ class Game:
 
     def play(self, difficulty):
         pass
-
-    def add_score(self, difficulty):
-        pass
