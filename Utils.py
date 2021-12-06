@@ -1,8 +1,8 @@
 import os
 import platform
 
-SCORES_FILE_NAME = "Scores.txt"
-BAD_RETURN_CODE = 1
+scores_file_name = "Scores.txt"
+bad_return_code = 1
 
 
 def screen_cleaner():
