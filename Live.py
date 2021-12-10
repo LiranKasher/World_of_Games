@@ -22,6 +22,7 @@ def player_name():
 
 def welcome(name):
     print(f"Hello {name} and welcome to World of Games (WoG).\nHere you can find many cool games to play.\n")
+    time.sleep(5)
 
 
 def load_game():
