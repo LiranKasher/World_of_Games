@@ -13,6 +13,7 @@ def play_game():
     is_won = False
     while game_on:
         if not just_played:
+            score_file_cleaner()
             welcome(player_name())
         game = load_game()
         if game.game_type == 1:
