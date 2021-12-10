@@ -7,11 +7,10 @@ import time
 
 
 def play_game():
-    game_on = True
     just_played = False
-    screen_cleaner()
     is_won = False
-    while game_on:
+    screen_cleaner()
+    while True:
         if not just_played:
             score_file_cleaner()
             welcome(player_name())
