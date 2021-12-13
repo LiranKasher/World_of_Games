@@ -1,8 +1,10 @@
-from Live import *
-from GuessGame import *
-from MemoryGame import *
-from CurrencyRouletteGame import *
-from Score import *
+from Live import player_name, welcome, load_game
+from GuessGame import GuessGame
+from MemoryGame import MemoryGame
+from CurrencyRouletteGame import CurrencyRouletteGame
+from Utils import screen_cleaner
+from Score import add_score, score_file_cleaner
+from MainScores import app
 import time
 
 
@@ -35,6 +37,7 @@ def play_game():
             break
         else:
             just_played = True
+    app.run(port=5001)
 
 
 play_game()

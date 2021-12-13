@@ -1,8 +1,11 @@
 import numpy as np
 from Utils import score_file_name
 
+points_of_winning = 0
+
 
 def add_score(difficulty):
+    global points_of_winning
     latest_points_of_winning = (difficulty * 3) + 5
     with open(score_file_name, "r+") as score:
         previous_points_of_winning = np.genfromtxt(score_file_name, dtype=int)
