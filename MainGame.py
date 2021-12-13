@@ -4,7 +4,7 @@ from MemoryGame import MemoryGame
 from CurrencyRouletteGame import CurrencyRouletteGame
 from Utils import screen_cleaner
 from Score import add_score, score_file_cleaner
-from MainScores import app
+from MainScores import score_server
 import time
 
 
@@ -37,7 +37,7 @@ def play_game():
             break
         else:
             just_played = True
-    app.run(port=5001)
+    score_server()
 
 
 play_game()
