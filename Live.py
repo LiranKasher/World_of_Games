@@ -17,7 +17,7 @@ def player_name():
         else:
             break
     screen_cleaner()
-    with open(player_name_file, "r+") as current_player_name:
+    with open(player_name_file, "w") as current_player_name:
         current_player_name.write(current_name)
     return current_name
 
