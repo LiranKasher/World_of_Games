@@ -1,5 +1,5 @@
 from Class import Game
-from Utils import screen_cleaner
+from Utils import screen_cleaner, player_name_file
 import time
 
 current_name = ""
@@ -17,6 +17,8 @@ def player_name():
         else:
             break
     screen_cleaner()
+    with open(player_name_file, "r+") as current_player_name:
+        current_player_name.write(current_name)
     return current_name
 
 

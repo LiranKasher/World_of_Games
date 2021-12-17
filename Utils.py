@@ -2,6 +2,7 @@ import os
 import platform
 
 score_file_name = "Scores.txt"
+player_name_file = "player_name.txt"
 bad_return_code = 1
 
 
